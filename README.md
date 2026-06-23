@@ -1,6 +1,10 @@
 # Airdrop QA Toolkit
 
-A Python-based QA automation toolkit built to validate Web3 campaign pages and practice Selenium automation.
+
+![Python Tests](https://github.com/GaralaRamaKrishna/airdrop-qa-toolkit/actions/workflows/python-tests.yml/badge.svg)
+
+Python Selenium + Pytest framework for validating Web3 and airdrop websites.
+
 
 ## Features
 
