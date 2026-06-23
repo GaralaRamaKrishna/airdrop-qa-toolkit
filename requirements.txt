@@ -1,0 +1,5 @@
+selenium
+pytest
+pandas
+requests
+webdriver-manager

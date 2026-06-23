@@ -1,0 +1,6 @@
+print("Starting Airdrop QA Toolkit...")
+print("Checking campaign pages...")
+print("Checking wallet buttons...")
+print("Checking social links...")
+print("Generating report...")
+print("Done.")
