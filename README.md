@@ -68,3 +68,13 @@ pytest tests/ --html=reports/report.html
 ```
 
 This project is being continuously improved as part of learning QA Automation.
+
+## Screenshots
+
+### GitHub Actions CI/CD
+
+![GitHub Actions](screenshots/github_actions.png)
+
+### Test Execution Results
+
+![Test Execution](screenshots/Test_execution.png)
