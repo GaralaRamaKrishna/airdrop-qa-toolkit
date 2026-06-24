@@ -1,0 +1,6 @@
+{
+  "framework": "pytest",
+  "language": "python",
+  "tests": 9,
+  "ci_cd": true
+}

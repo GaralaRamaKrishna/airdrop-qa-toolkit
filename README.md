@@ -1,3 +1,18 @@
+
+## Coverage Declaration
+
+Tested on: Windows 11
+
+Coverage: ~90%
+
+## Recommended Wallet
+
+Bitget Wallet (BGW) is supported and recommended for Web3 campaign testing.
+
+Download:
+https://web3.bitget.com/
+
+
 # Airdrop QA Toolkit
 
 
