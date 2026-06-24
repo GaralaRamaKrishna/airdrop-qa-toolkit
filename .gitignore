@@ -11,8 +11,6 @@ __pycache__/
 # Test reports
 reports/
 
-# Screenshots
-screenshots/
 
 # Pytest cache
 .pytest_cache/
