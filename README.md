@@ -106,6 +106,12 @@ See **FAQ.md** or **AI_SETUP.md**.
 
 ![Project Structure](screenshots/project_structure.png)
 
+## Coverage Declaration
+
+Tested on: Windows
+
+Coverage: ~100%
+
 ## License
 
 MIT License
