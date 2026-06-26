@@ -1,5 +1,6 @@
 selenium
 pytest
+pytest-html
 pandas
 requests
 webdriver-manager

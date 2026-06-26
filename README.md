@@ -1,80 +1,111 @@
-
-## Coverage Declaration
-
-Tested on: Windows 11
-
-Coverage: ~90%
-
-## Recommended Wallet
-
-Bitget Wallet (BGW) is supported and recommended for Web3 campaign testing.
-
-Download:
-https://web3.bitget.com/
-
-
 # Airdrop QA Toolkit
 
+A simple Python toolkit to check Web3 websites before connecting your wallet.
 
-![Python Tests](https://github.com/GaralaRamaKrishna/airdrop-qa-toolkit/actions/workflows/python-tests.yml/badge.svg)
+No coding required. Install Python once, then run the toolkit.
 
-Python Selenium + Pytest framework for validating Web3 and airdrop websites.
-
+---
 
 ## Features
 
-- Selenium WebDriver
-- Pytest framework
-- Logging support
-- HTML reports
-- CSV-driven tests
-- Screenshot capture on failures
-- Page Object Model (POM)
-- Config management
+* Check website availability
+* Verify HTTPS/SSL certificate
+* Check HTTP status code
+* Detect redirects
+* Measure page load speed
+* Verify wallet button
+* Check social links
+* Generate an HTML report
+* Save screenshots if a test fails
 
-## Tech Stack
+---
 
-- Python
-- Selenium
-- Pytest
-- Pandas
-- WebDriver Manager
+## Requirements
 
-## Project Structure
+* Windows 10/11
+* Python 3.10 or later
+* Google Chrome
+* Internet connection
+
+---
+
+## Setup
+
+1. Download or clone this project.
+2. Install Python from:
+   https://www.python.org/downloads/
+3. During installation, enable **"Add Python to PATH"**.
+
+---
+
+## Run
+
+### Test one website
+
+Double-click **run_single_site.bat**
+
+Enter a website URL when prompted.
+
+Example:
 
 ```
-airdrop-qa-toolkit
-├── config
-├── pages
-├── reports
-├── screenshots
-├── tests
-├── utils
-├── campaigns.csv
-├── requirements.txt
-└── README.md
+https://base.org
 ```
 
-## Run Tests
+---
 
-```bash
-pytest tests/ -v -s
+### Test multiple websites
+
+Edit **campaigns.csv** with your websites.
+
+Example:
+
+```csv
+name,url
+Base,https://base.org
+Bitget,https://web3.bitget.com
 ```
 
-## Generate HTML Report
+Then double-click **run.bat**.
 
-```bash
-pytest tests/ --html=reports/report.html
+---
+
+## Reports
+
+After the scan finishes, open:
+
+```
+reports/report.html
 ```
 
-This project is being continuously improved as part of learning QA Automation.
+If a test fails, screenshots are saved in the **screenshots** folder.
+
+---
+
+## Need Help?
+
+See **FAQ.md** or **AI_SETUP.md**.
+
+---
 
 ## Screenshots
 
-### GitHub Actions CI/CD
+### Start Toolkit
 
-![GitHub Actions](screenshots/github_actions.png)
+![Start Toolkit](screenshots/start_toolkit.png)
 
-### Test Execution Results
+### Test Results
 
-![Test Execution](screenshots/Test_execution.png)
+![Test Results](screenshots/test_results.png)
+
+### HTML Report
+
+![HTML Report](screenshots/html_report.png)
+
+### Project Structure
+
+![Project Structure](screenshots/project_structure.png)
+
+## License
+
+MIT License
