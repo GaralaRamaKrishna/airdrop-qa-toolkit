@@ -1,70 +1,166 @@
 # AI Setup Guide — Airdrop QA Toolkit
 
-This file is designed to be copied and pasted into ChatGPT (or any AI assistant).
+This guide is for beginners.
 
-It gives the AI everything it needs to walk you through setup, even if you have never used Python before.
-
----
-
-## How to use this file
-
-1. Open [ChatGPT](https://chatgpt.com/) in your browser
-2. Copy **everything below the line** and paste it into the chat
-3. Press Enter and follow the AI's instructions one step at a time
+If you get stuck while setting up the toolkit, copy everything below into ChatGPT and let it guide you step by step.
 
 ---
+
+## How to use
+
+1. Open https://chatgpt.com/ or any ai.
+2. Copy everything below this line.
+3. Paste it into ChatGPT.
+4. Follow the instructions one step at a time.
 
 ---
 
 Hi ChatGPT,
 
-I downloaded a free toolkit called **Airdrop QA Toolkit** from GitHub.
+I downloaded **Airdrop QA Toolkit** from GitHub.
 
-I want to run it on my Windows computer, but I am not a developer and I have never used Python or Command Prompt before.
+I have never used Python or Command Prompt before.
 
-Please be my personal setup assistant and help me get it running.
+Please help me set up and run this toolkit on my Windows computer.
 
-**Important rules for you:**
+### Important
 
-- Assume I know absolutely nothing about programming
-- Explain every single step in plain, simple English
-- Do not use technical words without explaining them first
-- Guide me one step at a time — wait for me to confirm before moving on
-- If I get an error message, stop and help me fix it before we continue
-- Do not assume any software is already installed
+* Explain everything in simple English.
+* Guide me one step at a time.
+* Wait for me to confirm each step before continuing.
+* If I get an error, help me fix it before moving on.
+* Assume nothing is already installed.
 
-**Here is what I need your help with:**
+### Help me with:
 
-1. Check if Python is installed on my computer, and help me install it if it is not
-2. Make sure I ticked "Add Python to PATH" during installation (this is very important)
-3. Help me open the project folder I downloaded
-4. Help me double-click `run.bat` to start the toolkit
-5. If `run.bat` fails or an error appears, explain what the error means in plain English and help me fix it
-6. Once the toolkit is running, show me how to add my own Web3 campaign URLs to the `my_campaigns.csv` file
-7. Explain what the results mean once the checks are done
+1. Check if Python is installed.
+2. Help me install Python if needed.
+3. Make sure **"Add Python to PATH"** is enabled.
+4. Help me open the project folder.
+5. Help me run **Start_Toolkit.bat**.
+6. If I get an error, explain it in simple English and help me fix it.
+7. Help me edit **campaigns.csv** to add my own websites.
+8. Explain the HTML report after the scan finishes.
 
-**Common errors you might need to help with:**
+### Common Errors
 
-- `python is not recognized` → Python is not installed or PATH was not set
-- `pip is not recognized` → Same as above — PATH issue
-- `No module named ...` → A required package is missing, install it with pip
-- `FileNotFoundError` → The file path is wrong or the file does not exist
-- `ChromeDriver` errors → Help me install or update Chrome and ChromeDriver
+**python is not recognized**
 
-For every error: first explain what went wrong in one simple sentence, then give me the exact fix.
+Python is not installed or PATH is not configured correctly.
 
-My goal is simply to run the toolkit successfully so I can check my Web3 campaign URLs.
+**pip is not recognized**
+
+Python was installed but PATH was not configured correctly.
+
+**No module named ...**
+
+Install the missing package.
+
+**FileNotFoundError**
+
+The file or folder cannot be found.
+
+**ChromeDriver errors**
+
+Help me update Google Chrome and ChromeDriver.
+
+For every error:
+
+* Explain what happened in one simple sentence.
+* Give me the exact steps to fix it.
+
+My goal is to successfully run the toolkit and test my Web3 campaign websites.
 
 Thank you!
 
 ---
 
-## Still stuck?
+# Manual Setup (Optional)
 
-If the AI cannot solve your issue, open a GitHub Issue and include:
+## 1. Install Python
 
-- Your Windows version (e.g. Windows 10 or Windows 11)
-- What happened when you double-clicked `run.bat`
-- A screenshot of any error message
+Download Python:
+
+https://www.python.org/downloads/
+
+During installation, enable:
+
+✔ Add Python to PATH
+
+---
+
+## 2. Install Required Packages
+
+Open **Command Prompt** inside the project folder and run:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## 3. Start the Toolkit
+
+For most users:
+
+* Double-click **Start_Toolkit.bat**
+
+Advanced users can also run:
+
+```
+python airdrop_auto.py
+```
+
+---
+
+## 4. Chrome Debug Mode (Optional)
+
+Use this mode only if you want to test wallet interactions.
+
+### Step 1
+
+Close **all Google Chrome windows**.
+
+This is important before starting Chrome in Debug Mode.
+
+### Step 2
+
+Open **Command Prompt**.
+
+### Step 3
+
+Copy and paste the command below, then press **Enter**.
+
+```
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --no-first-run --user-data-dir="%LOCALAPPDATA%\Google\Chrome-Debug"
+```
+
+A new Chrome window will open in Debug Mode.
+
+### Step 4
+
+Double-click:
+
+```
+Debug_Mode.bat
+```
+
+The toolkit will connect to the Debug Chrome window.
+
+Note:
+
+Only use Debug Mode for testing.
+Do not use it for personal browsing or logging into sensitive accounts.
+
+---
+
+## Still Need Help?
+
+If the toolkit still doesn't work, create a GitHub Issue and include:
+
+* Windows version
+* Python version
+* What happened
+* A screenshot of the error
 
 This helps improve the toolkit for everyone.

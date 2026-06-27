@@ -4,28 +4,27 @@ color 0A
 
 echo.
 echo ==========================================
-echo      AIRDROP QA TOOLKIT
+echo           AIRDROP QA TOOLKIT
 echo ==========================================
 echo.
 
-:ask
+python --version >nul 2>&1
 
-set /p URL=Enter Website URL (Example: https://base.org):
-
-if "%URL%"=="" (
+if errorlevel 1 (
     echo.
-    echo Please enter a website URL.
+    echo Python is not installed.
     echo.
-    goto ask
+    echo Download Python from:
+    echo https://www.python.org/downloads/
+    echo.
+    echo During installation, make sure you enable:
+    echo [✓] Add Python to PATH
+    echo.
+    pause
+    exit
 )
 
-echo name,url>campaigns.csv
-echo Custom Website,%URL%>>campaigns.csv
-
-echo.
-echo Running tests...
-echo.
-
 python main.py
+
 
 pause
